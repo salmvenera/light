@@ -14,5 +14,22 @@ const header = () => {
             });
         });
     };
+    let up = document.querySelector('.up');
+
+    window.addEventListener('scroll', trackScroll);
+    up.addEventListener('click', () => {});
+   
+    function trackScroll() {
+        let scrolled = window.pageYOffset;up
+        let coords = document.documentElement.clientHeight;
+    
+        if (scrolled > coords) {
+          up.classList.add('up-up');
+        }
+        if (scrolled < coords) {
+          up.classList.remove('up-up');
+        }
+      }
+    
 }
 export default header

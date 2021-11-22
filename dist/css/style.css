@@ -18,6 +18,17 @@ body {
 	margin: 0 auto -60px auto;
 	background: #fff;
 }
+.top-slider .up {
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    z-index: 300;
+    border: 4px solid #e9bb26;
+    padding: 0 2px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+}
 .footer-wrapper {
 	min-height: 60px;
 	max-width: 100%;
@@ -970,19 +981,13 @@ video#video_background {
 /* end top slider */
 
 /************************* accordeon **************************/
+
 .accordeon .element-content {
 	display: none;
 	padding: 20px;
 	font-size: 13px;
 	color: #888885;
 }
-
-
-/* .accordeon .element-content .active {
-	display: block;
-}
- */
-
 .accordeon .element {
 	margin-bottom: 6px;
 	background: #fff;
@@ -1028,9 +1033,9 @@ video#video_background {
 .accordeon .element.active .title:before {
 	background: url(../images/minus.png) 50% 50% no-repeat #333;
 }
-.accordeon > div:first-of-type .element-content {
+.accordeon .element.active .element-content {
 	display: block;
-}      
+}    
 .accordeon .element .title:hover:before {
 	background-color: #333;
 }
@@ -1229,6 +1234,10 @@ video#video_background {
 	padding: 0 2px;
 	cursor: pointer;
 	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+}
+.up-up {
+	display: block;
 }
 
 @media only screen and (min-width: 992px) {

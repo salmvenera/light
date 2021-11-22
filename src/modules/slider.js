@@ -26,7 +26,7 @@ const slider = () => {
     table[0].classList.add('active')
     item[0].classList.add('active')
      
-    let currentSlide = 0 
+    let currentSlide = 0  //счетчик, будем увеличивать и по этому индексу доставать необходимый слайд из нод листа и передавать ему активный класс
 
     const prevSlide = (elems, index, strClass) => {
         elems[index].classList.remove(strClass)
@@ -36,7 +36,7 @@ const slider = () => {
         elems[index].classList.add(strClass)
     }
 
-    const autoSlide = () => { 
+    const autoSlide = () => {   // чтобы слайды автоматически переключались
         prevSlide(table, currentSlide, 'active')
         prevSlide(item, currentSlide, 'active')
         currentSlide++
@@ -60,3 +60,34 @@ const slider = () => {
 
 }
 export default slider
+
+/* let interval = 0
+    let dots = 0
+
+    topSlider.forEach(text => {
+ 
+        text.addEventListener('input', () => {
+        const newUl = document.createElement('ul')
+        newUl.classList.add = "slick-dots"
+        topSlider.append.newUl
+
+        })
+    })
+    const newUl = document.createElement('ul')
+    newUl.classList = "slick-dots"
+    topSlider.append.newUl
+    
+    const genDot = () => {  
+        const topSlider = document.querySelector('.top-slider')  
+        let dotsNew = ``;
+        topSlider.forEach((elems, index) => {
+            if (index === 0) {
+                dotsNew += `<div class="slick-dots li slick-active"></div>`;
+                } else {
+                    dotsNew += `<div class="slick-dots li"></div>`;
+                }
+            });
+        portfolioDots.insertAdjacentHTML('beforeend', dotsNew);
+        dots = document.querySelectorAll('.dot')
+    };
+    genDot();  */

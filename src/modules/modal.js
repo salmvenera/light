@@ -1,7 +1,7 @@
 const modal = () => {
-    const callReq = document.querySelector('.relative [href="#callback"]') 
-    const modalCallback = document.querySelector('.modal-callback')
-    const modalOverlay = document.querySelector('.modal-overlay')  
+    const callReq = document.querySelector('.relative [href="#callback"]') // заказать звонок кнопка
+    const modalCallback = document.querySelector('.modal-callback')  //  само модальное окно
+    const modalOverlay = document.querySelector('.modal-overlay')  // фон, подложка
     const modalClose = document.querySelector('.modal-close')     
     const button = document.querySelector('.button-services') 
     
