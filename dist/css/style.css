@@ -1216,11 +1216,13 @@ video#video_background {
 }
 .services-elements > .row > hr:nth-of-type(2n) {
 	clear: both;
+	
 }
 .services-elements .element-price {
 	margin-bottom: 15px;
 	font-weight: bold;
 	color: #2fab6d;
+	position: fixed;
 }
 
 .up {
