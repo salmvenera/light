@@ -1,5 +1,5 @@
 const sendForm = ( {formId} ) => {
-    const form = document.querySelector(formId)    // форма для отправки данных
+    const form = document.querySelector(formId)  
     const statusBlock = document.createElement('div')
     const loadText = 'Идет отправка..'
     const errorText = 'Ошибка...'
@@ -56,8 +56,6 @@ const sendForm = ( {formId} ) => {
             formBody[key] = val
         })
 
-   // console.log(form.querySelectorAll('input'));
-
     if (validate(formElements)) {
         sendData(formBody)
             .then(data => {
@@ -80,7 +78,6 @@ const sendForm = ( {formId} ) => {
     } else {
         alert('Данные не валидны, заполните все поля формы!')
         formElements.forEach(input => {
-            //input.value = ''
             statusBlock.textContent = ''
             
         })  
@@ -94,8 +91,6 @@ try {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault()
-
-        console.log(e.target);
         submitForm()
     })
 

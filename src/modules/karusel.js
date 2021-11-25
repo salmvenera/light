@@ -1,22 +1,13 @@
 const karusel = () => {
     window.addEventListener('load', () => {
 
-    //// стрелки карусели
     const arrowLeft = document.querySelector('.arrow-left') 
     const arrowRight = document.querySelector('.arrow-right')
 
-    let column = document.querySelectorAll('.col-md-4')   //отдельно колонки 
-    let images = document.querySelectorAll('.services-elements img')  // отдельно нод лист с изображ
-
-    let oneBlock = document.querySelector('.services-elements relative') // один блок карусели с img и text
-    let blockNode = document.querySelectorAll('.services-elements .element') // нод лист всех блоков карусели
     let carousel = document.querySelector('.services-carousel')
-    let carouselNode = document.querySelectorAll('.services-elements .col-sm-6')
-
-    // счетчики
+    
     let counter = 0;
     const stepSize = `400`;
-    console.log(stepSize)
 
     const cssStyle = `
     <style> 
@@ -81,8 +72,7 @@ const karusel = () => {
             counter--;
             carousel.style.transform = 'translateX(' + `${-stepSize * counter}px)` 
         }
-    })
-         
+    })    
 })
 }
 export default karusel
